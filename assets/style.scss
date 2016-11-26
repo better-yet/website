@@ -109,7 +109,7 @@ body {
 	}
 	
 	//regular page (profile, services, contact)
-	&.page {
+	&.page, &.blog, &.single {
 		color: $red;
 		a { color: $red; }
 		@include background-image($red-light);
@@ -183,7 +183,7 @@ body {
 	}
 	
 	//single project page
-	&.single {
+	&.single-project {
 		color: $purple;
 		a { color: $purple; }
 		@include background-image($purple-light);

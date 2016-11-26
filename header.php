@@ -15,7 +15,7 @@
         ?></title>
         <meta name="description" content="<?php bloginfo('description'); ?>">
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:700' rel='stylesheet' type='text/css'>
-        <?php if (is_page()) {?>
+        <?php if (is_page() || is_home()) {?>
 			<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-red.ico">
 		<?php } elseif (is_archive()) {?>
 			<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-green.ico">
@@ -41,7 +41,7 @@
 				]);
 				
 				# Sub Nav
-				if (is_page()) {
+				if (is_page() || is_home() || is_singular('post')) {
 					//page
 					wp_nav_menu([
 						'menu' => 'about-menu',
