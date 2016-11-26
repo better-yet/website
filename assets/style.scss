@@ -1,0 +1,251 @@
+//colors
+$green: rgba(32, 126, 90, 1);
+$green-light: rgba(32, 126, 90, .1);
+//$purple: rgba(124, 51, 236, 1);
+$purple: rgba(110, 52, 199, 1);
+$purple-light: rgba(110, 52, 199, .1);
+$red: rgba(216, 104, 91, 1);
+$red-light: rgba(216, 104, 91, .1);
+$white: rgba(0, 0, 0, .04);
+
+//measurements
+$header-margin-top: 44px;
+$main-margin-top: 149px;
+$wp-admin-bar-height-mobile: 46px;
+$wp-admin-bar-height-desktop: 32px;
+
+//paths
+$image-path: '../img/';
+$icon-font-path: '../fonts/';
+
+//fonts
+$font-family-sans-serif: 'Roboto Mono', monospace; //so-named for Bootstrap
+$font-variation: 'Moderat', sans-serif;
+$font-size: 11px;
+$top-font-size: 20px;
+$project-title-font-size: 11px;
+
+@font-face {
+	font-family: 'Moderat';
+	src: url($icon-font-path + 'moderat-regular-webfont.eot');
+	src: url($icon-font-path + 'moderat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url($icon-font-path + 'moderat-regular-webfont.woff2') format('woff2'),
+		 url($icon-font-path + 'moderat-regular-webfont.woff') format('woff'),
+		 url($icon-font-path + 'moderat-regular-webfont.ttf') format('truetype'),
+		 url($icon-font-path + 'moderat-regular-webfont.svg#moderatregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Moderat';
+	src: url($icon-font-path + 'moderat-bold-webfont.eot');
+	src: url($icon-font-path + 'moderat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url($icon-font-path + 'moderat-bold-webfont.woff2') format('woff2'),
+		 url($icon-font-path + 'moderat-bold-webfont.woff') format('woff'),
+		 url($icon-font-path + 'moderat-bold-webfont.ttf') format('truetype'),
+		 url($icon-font-path + 'moderat-bold-webfont.svg#moderatbold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@mixin background-image($color) {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="569" height="463" viewBox="0 0 569.2 462.6"><path fill="#{$color}" d="M103.1 238.4c9.7-13.5 23.7-32.6 22.3-50.1 -1.6-18.8-18.7-18-24.7-6 -4.9 9.8-6.7 43.6-7.3 63.9 -0.5 22.2 7.9 37 22.8 37.1 14.4 0 27.7-18.4 31.1-34.7 0.4-1.6 0.5-3.2 0.7-4.8 7.9-1.5 16.3-5.3 25.7-14.4 3.2 11.8 10.4 21 21.4 21.7 21.1 1.2 34.6-16.5 49.2-47.8 1.9 19.6 7.9 32.3 15.8 30.8 9.4-1.8 15.7-14 21.8-33.9 2.4 16.8 8 27.1 15.1 25.8 11.4-2.2 19.9-21.2 31.1-48.4 3.4 11.7 10.6 20.9 21.7 21.5 18.2 0.9 30.4-12.1 42.5-35.7 8.6-17 11.5-26 15-23.1 3.3 2.8 5.2 25.2 8.1 51.5l10.1-4.7 13.9-68.9c1.3 4.1 3.3 8.1 7.2 10.7 10.1 7 22.6 1 31.3-5l-4.4-7.1c-6 4.3-14.5 8.9-21.2 4.8 -4.5-2.7-8.1-11.2-9.5-19.8l-10.5 0.5 -10.9 62.4c-0.8-10.2-1.7-28.1-8.8-33.7 -4.6-3.6-10-3-14.3 1.8 -2.4 2.6-4.9 9.1-12.3 23.7 -12.6 24.9-22.8 33.4-34.7 33.2 -4.4 0-8.3-3-11.1-7.7 9.8-5.5 20.7-13.4 25.1-22.2 4.7-9.6 3.6-17.8-2.4-23.9 -4.8-4.6-17.1-7.3-26 1 -5.4 5-8.9 13.7-10.1 22.5 -10.2 24.2-24.1 58.9-30 56.3 -2.7-1.1-5.8-14.7-6.6-25.7 -0.9-12-0.3-25.6 0.7-38.6l27.9-7.2 -2.4-9 -24.7 6.4c0.6-6.8 1.4-13.3 2.2-19.1l-9.6-1.9c-1.3 7.9-2.2 15.8-2.9 23.6l-26.8 7 1.2-10.9 -9.9-1.3c-0.7 5.2-1.3 10.1-1.8 14.9l-19.4 5.1 2.5 9 16.2-4.2c-0.3 7.3-0.3 14.4-0.1 21.5 -15.5 31-27.3 57.1-46.7 56.5 -4.4-0.1-8.2-3.1-11-7.7 10.2-6 21.1-13.3 25.6-22.6 4.4-9.1 3.5-17.2-2.4-23.3 -4.7-4.7-17-7.5-26 0.7 -7.1 6.5-11.2 19.4-10.8 30.7 -10 9.1-17.4 13.4-24.6 15.3 -1.8-9-7.2-15.3-13.6-16.4 -9.4-1.6-18.5 7.1-15.2 16.3 3 8.6 10.9 10.7 19.7 10.2 -0.2 1.5-0.5 2.8-0.9 4.3 -3.8 13.6-13.8 24.2-21.5 24.2 -6.6 0.1-13.9-8-13.2-28.6L103.1 238.4zM109.3 185.4c2.1-4.1 6.3-2.8 6.8 1.2 1.3 10.2-4.1 23.5-12.4 37.5C104.3 208.5 105.6 192.4 109.3 185.4zM342 145.6c3.9-4.4 9.6-5.5 13-3.1 4 2.9 4.2 9-0.1 15.4 -4.4 6.4-11.2 11.3-18.3 15.8l0-0.3C334.6 164.6 337.1 151.1 342 145.6zM253.6 161.2l27.2-7.1c-0.3 7.5-0.5 15-0.4 22.2 -5.5 24-15.2 49.9-20.5 47.6 -2.6-1.1-5.8-14.7-6.6-25.7C252.4 185.5 252.7 173.2 253.6 161.2zM188 197.6c4-4.3 9.7-5.4 13.1-3 4 3 3.9 8.9-0.2 15.2 -3.7 5.6-10.3 10.6-18.6 15.8l-0.1-0.3C180.4 216.4 183 203 188 197.6zM138.3 236.1c-7 0.4-9.4-1.4-10.5-2.8 -2.1-2.6-0.2-7.2 4.4-6.9 3 0.2 5.5 4.1 6.2 9.7L138.3 236.1z"/><path fill="#{$color}" d="M565.8 129.7c-7.3-48.9-39.5-86.4-93.3-108.5C424.7 1.6 362.1-4.7 296 3.5 138.4 22.9-13.5 119.6 1 266.9c7.4 75.6 55.9 135.8 136.5 169.4 42.7 17.8 90.5 26.3 137.9 26.3 70.4 0 140-18.9 190.2-54.8 -1.1 9.2 1.9 14.7 4.3 17.5 4.3 4.9 10.9 6.9 17.5 5.1 6.5-1.8 11.2-7 12.4-13.6l0.8-4.6 -9.1-1.6 -0.8 4.6c-0.8 4.5-4.3 5.9-5.8 6.3 -2.4 0.7-5.7 0.4-8-2.2 -3.5-4-3-12 1.3-21.8l-7.2-5.4c-80.1 65.3-222 80.6-330 35.7C63.7 395.5 17.2 338.1 10.2 266 -3.7 124.6 144 31.5 297.1 12.7 461.2-7.6 545.7 57.6 556.6 131.1c9.6 64.6-3.2 172.3-77.9 204 -22.4 9.5-44.5 7-54.7-9.5 -2.8-4.4-3.9-15.6-4.3-22.2 -0.7-12.6 0.2-26.9 1.6-40.3l31.2-7.3 -2.1-9.1 -28.1 6.5c0.8-6.1 2.1-15.1 2.9-20.5l-10.2 2c-1.3 7.3-2.2 13.6-3 20.9l-18.6 4.4 2.1 9.1 15.7-3.7c-0.4 5.2-0.7 10.4-0.8 15.6l-0.1-0.1c-13.3 33.8-30.5 58.7-50.1 58.2 -4.4-0.1-8.3-3-11-7.6 10.2-6.1 21-13.5 25.4-22.8 4.3-9.2 3.4-17.2-2.6-23.3 -4.7-4.6-17.1-7.4-26 0.9 -8.7 8.1-12.8 25.9-9.5 38.5 0.3 1.4 0.7 2.7 1.2 4.1l-23.9 21.2 -0.4-47.4 -2.2-0.2 -5.4-0.3 -0.7 0 -1.9-0.1c-0.7 0.6-16.2 52.4-22.3 55.9 -2.5-0.2-5.9-10.4-6.5-18.6 -0.7-10.2-0.8-18.8 0.5-29.1l-9.4-1.9c-1.7 11.2-1.8 19.8-0.9 32 0.6 9.5 4.4 27.6 15 28.1 10.1 0.6 18.4-23.4 25.3-44.6l-0.4 32.8c-29.5 21.7-31.3 34.4-28.4 43 4.5 13.4 16 14.8 24.6 11.2 12.1-5.1 13.3-21.5 13.1-38.5l-0.1-11.2 27.3-24.3c4 6.7 9.8 11.3 17.5 11.7 21.1 1 39.4-16.8 51.6-47.6 0 1.1 0 2.2 0.1 3.3 0.4 8.8 1.6 20 6.2 27.1 12.2 18.9 39.2 23.7 65.7 12.4 26.9-11.4 51.3-37.4 66.9-71.2C567.9 232.1 573.6 182.8 565.8 129.7zM304.6 374.3c-0.1 18.4-2.1 24.6-6.3 27.3 -4.3 2.9-10 1.7-12.7-4.1 -3.6-7.8 2.8-16.9 19.1-29.6L304.6 374.3zM351.2 294.9c3.9-4.3 9.6-5.5 13-3.1 4 2.9 4 8.9-0.1 15.2 -3.7 5.6-10.2 10.7-18.4 15.9l0-0.3C343.7 313.9 346.2 300.4 351.2 294.9z"/></svg>');
+}
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+	margin: 20px 0; 
+	background: $white center center fixed no-repeat;
+	font-size: $font-size;
+	-webkit-font-smoothing: antialiased;
+
+	header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 10;
+				
+		nav {
+			margin: 20px 0;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: auto;
+				text-align: center;
+				li {
+					display: inline;
+					&.current_page_item a, &.current-menu-item a, a.active { text-decoration: underline; }
+				}
+			}
+			&.header {
+				font-family: $font-variation;
+				font-size: $top-font-size; 
+				margin-top: $header-margin-top;
+				text-align: center;
+				ul li + li {
+					margin-left: 7px;
+					&:before { content: "/"; margin-right: 14px; }
+				}
+			}
+			&.sub {
+				text-transform: uppercase;
+				ul li {
+					margin: 0 15px;
+				}
+			}
+		}
+	}
+	
+	main { 
+		margin-top: $main-margin-top;
+	}
+	
+	//offset if admin bar is present
+	&.admin-bar {
+		header { top: $wp-admin-bar-height-mobile; }
+	}
+	
+	//regular page (profile, services, contact)
+	&.page {
+		color: $red;
+		a { color: $red; }
+		@include background-image($red-light);
+		.content {
+			font-family: $font-variation;
+			font-size: 22px;
+			line-height: 1.2;
+			
+			a.hello {
+				display: block;
+				margin: 25px 0 0 -5px; 
+				opacity: 0;
+			}
+		}
+		
+		.side img {
+			margin-bottom: 20px;
+		}
+
+		//special fade-in for 
+		&.page-id-246.loaded a.hello {
+			opacity: 1;
+			margin-left: 0;
+		    -webkit-transition: all .2s ease-in;
+		       -moz-transition: all .2s ease-in;
+		        -ms-transition: all .2s ease-in;
+		         -o-transition: all .2s ease-in;
+		            transition: all .2s ease-in;
+		}
+		
+		.row.attachments {
+			margin-top: 20px;
+			img { display: block; margin-bottom: 20px; }
+		}
+		
+		//contact page
+		&.page-id-250 {
+			figure {
+				display: block;
+				margin-bottom: 20px;
+				img { display: block; margin-bottom: 10px; }
+				figcaption {
+					display: block;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+		
+	}
+	
+	//projects list page
+	&.post-type-archive-project {
+		color: $green;
+		a { color: $green; }
+		@include background-image($green-light);
+	
+		.projects {
+			text-align: center;
+			text-transform: uppercase;
+			& > a { 
+				div {
+					background: no-repeat center center;
+					background-size: contain;
+					height: 240px;
+					margin-bottom: 8px;
+				}
+				span { display: block; height: 45px; }
+			}
+		}
+	}
+	
+	//single project page
+	&.single {
+		color: $purple;
+		a { color: $purple; }
+		@include background-image($purple-light);
+		
+		.project {
+			.attachments {
+				div {
+					background: no-repeat center center;
+					background-size: contain;
+					height: 500px;
+					margin-bottom: 15px; 
+				}
+			}
+			.description {
+				& > div {
+					background-color: $purple;
+					color: white;
+					min-height: 400px; 
+					padding: 10px;
+					h1 { 
+						font-family: $font-variation;
+						font-size: 16px;
+						letter-spacing: 2px;
+						text-transform: uppercase;
+						margin: 0 0 15px; 
+					}
+					p {
+						font-family: $font-variation;
+						line-height: 1.3;
+						margin: 0 0 15px;
+						font-size: 13px;
+						&.types {
+							font-family: $font-family-sans-serif;
+							font-size: $font-size;
+							span { text-decoration: underline; }
+						}
+						&:last-child { margin-bottom: 0; }
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+}
+
+@media (min-width: $screen-md-min) {
+	body.admin-bar {
+		header { top: $wp-admin-bar-height-desktop; }
+	}
+	body.post-type-archive-project {
+		.projects > a {
+			span { opacity: 0; }
+			&:hover span { opacity: 1; }
+		}
+	}
+	
+}
+
+@media (min-width: $screen-lg-min) {
+
+}
+
