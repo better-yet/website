@@ -15,7 +15,7 @@
 
 				<?php
 
-				the_title( '<h1>', '</h1>' );
+				the_title('<h1><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a><small>' . get_the_date() . '</small></h1>');
 
 				the_content();
 

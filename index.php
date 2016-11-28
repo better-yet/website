@@ -12,7 +12,7 @@
 				<article id="post-<?php the_ID()?>" <?php post_class()?>>
 				
 					<?php
-					the_title( '<h1><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+					the_title( '<h1><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a><small>' . get_the_date() . '</small></h1>' );
 
 					the_excerpt();
 				
