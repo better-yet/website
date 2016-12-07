@@ -1,5 +1,9 @@
 const elixir = require('laravel-elixir');
 
+elixir.config.css.minifier.pluginOptions = {
+    keepSpecialComments: 0
+};
+
 elixir(mix => { mix
 	.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', 'assets/fonts')
 	.sass('./assets/style.scss', './assets/css')
