@@ -17,9 +17,14 @@ if (have_posts()) {
 		<div class="col-md-8 attachments">
 			<?php 
 			$attachments = new Attachments('attachments');
-			while ($attachments->get()) {?>
+			while ($attachments->get()) {
+				
+				if ($embed = $attachments->field('embed')) {
+					echo '<div class="embed">' . $embed . '</div>';
+				} else {?>
 				<div style="background-image: url(<?php echo $attachments->src('two-thirds')?>);"></div>
-			<?php }?>
+				<?php }
+			}?>
 		</div>
 		<div class="col-md-4 description">
 			<div data-spy="affix" data-clampedwidth=".description">
