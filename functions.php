@@ -52,11 +52,11 @@ add_action('attachments_register', function($attachments){
 				'label'		=> __('Title', 'attachments'),
 				'default'	=> 'title',
 			],
-			[
+			/* [
 				'name'		=> 'link',
 				'type'		=> 'text',
 				'label'		=> __('Link', 'attachments'),
-			],
+			],*/
 			[
 				'name'		=> 'embed',
 				'type'		=> 'textarea',
